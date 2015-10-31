@@ -1,0 +1,9 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "nodeJS day 2",
+    "packageVersion": "0.0.0",
+    "revealTheme": "league",
+    "useSass": false,
+    "deployToGithubPages": false
+  }
+}
