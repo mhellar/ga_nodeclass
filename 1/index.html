@@ -58,6 +58,12 @@
                     <br>
                     <p>The V8 JavaScript Engine is an open source JavaScript engine in the Chrome browser</p>
                 </section>
+
+                <section>
+                    <img src="img/dahl.jpg" height="500">
+                    <br>
+                    <p>NodeJS was created By Ryan Dahl</p>
+                </section>
                 <section>
                     <br>
                     <h3>V8 compiles JavaScript to native machine code before executing it, which runs very fast.</h3>
@@ -92,14 +98,6 @@
                     <iframe src="https://player.vimeo.com/video/31952864?color=c9ff23" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </section>
                 <section>
-                    <iframe src="https://player.vimeo.com/video/16379803" width="1000" height="542" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    <p><a href="https://vimeo.com/16379803">Viktor &ndash; 5000 Years of Chairs</a></p>
-                </section>
-                <section>
-                    <h3>Jürg Lehni - Viktor</h3>
-                    <img src="img/viktor.png">
-                </section>
-                <section>
                     <a href="https://wwwwwwwwwwwwwwwwwwwwww.bitnik.org/r/">Random Darknet Shopper</a>
                 </section>
             </section>
@@ -124,16 +122,15 @@ var finalNumber = initialNumber + 10;
 
 console.log(finalNumber);
 					</code></pre>
-                    <h3>run 'node app.js'</h3>
+
                 </section>
             </section>
             <section>
                 <section>
                     <h3>simple little programs</h3>
                     <br>
-                    <p>open &nbsp<b>/code/1</b>&nbspfolder in the terminal</p>
-                    <br>
-                    <p>and in sublime text</p>
+                    <p>cd code_node1/simple from the terminal</p><br>
+                    <p>and open in sublime text</p>
                     <a href="#" class="navigate-down">
                     </a>
                 </section>
@@ -223,11 +220,6 @@ var repeatingFunction = setInterval(function() {
 
 //******************************************************************************//
 
-//******************************************************************************//
-/*
- * setTimeout(callback, time) : delays the callback function for *time* ms
- * clearTimeout(timer) : stops a corresponding setTimeout callback
- */
 					</code></pre>
                     <a href="https://nodejs.org/api/timers.html">Node timers API</a>
                 </section>
@@ -309,7 +301,7 @@ console.log(myNumber) // logs out undefined -- this line gets run before readFil
                     <p>Because reading from the filesystem take longer that console.log it returns console.log(myNumber) first. This is non-blocking</p>
                 </section>
                 <section>
-                    <p>Why do we get undefined when we log out the number this time? In this code we use the fs.readFile method, which happens to be an asynchronous method. Usually things that have to talk to hard drives or networks will be asynchronous. If they just have to access things in memory or do some work on the CPU they will be synchronous. The reason for this is that I/O is reallyyy reallyyy sloowwww. A ballpark figure would be that talking to a hard drive is about 100,000 times slower than talking to memory (e.g. RAM).</p>
+                    <p>Why do we get undefined when we log out the number this time? In this code we use the fs.readFile method, which happens to be an asynchronous method. Usually things that have to talk to hard drives or networks will be asynchronous. <br> <br> If they just have to access things in memory or do some work on the CPU they will be synchronous.The reason for this is that I/O is reallyyy reallyyy sloowwww. A ballpark figure would be that talking to a hard drive is about 100,000 times slower than talking to memory (e.g. RAM).</p>
                 </section>
                 <section>
                     <p>We can fix the code by placing the console.log in the callback.</p>
@@ -329,7 +321,16 @@ addOne()
 					</code></pre>
                 </section>
                 <section>
-                    <p>Node does Input/Output in a way that is asynchronous which lets it handle lots of different things simultaneously. For example, if you go down to a fast food joint and order a cheeseburger they will immediately take your order and then make you wait around until the cheeseburger is ready. In the meantime they can take other orders and start cooking cheeseburgers for other people. Imagine if you had to wait at the register for your cheeseburger, blocking all other people in line from ordering while they cooked your burger! This is called blocking I/O because all I/O (cooking cheeseburgers) happens one at a time. Node, on the other hand, is non-blocking, which means it can cook many cheeseburgers at once.</p>
+                    <p>Node does Input/Output in a way that is asynchronous which lets it handle lots of different things simultaneously. For example, if you go down to a fast food joint and order a cheeseburger they will immediately take your order and then make you wait around until the cheeseburger is ready. In the meantime they can take other orders and start cooking cheeseburgers for other people. <br> <br> Imagine if you had to wait at the register for your cheeseburger, blocking all other people in line from ordering while they cooked your burger! This is called blocking I/O because all I/O (cooking cheeseburgers) happens one at a time. Node, on the other hand, is non-blocking, which means it can cook many cheeseburgers at once.</p>
+                </section>
+                                <section>
+                    <p>You use Callbacks in Jquery all the time</p>
+                    <pre><code class="hljs" data-trim contenteditable width>
+$("button").click(function(){
+    $("p").hide(1000);
+    alert("The paragraph is now hidden");
+});
+                    </code></pre>
                 </section>
                 <section>
                     <h3>Homework - read this article</h3>
